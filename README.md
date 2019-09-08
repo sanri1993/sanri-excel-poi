@@ -23,7 +23,7 @@ sanri-excel-poi 是一个开源的用于企业开发的 Excel 导入导出，在
 
 ```xml
 <dependency>
-	<groupId>com.sanri.excel</groupId>
+    <groupId>com.sanri.excel</groupId>
     <artifactId>sanri-excel-poi</artifactId>
     <version>1.0-RELEASE</version>
 </dependency>
