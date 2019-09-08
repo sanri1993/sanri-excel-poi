@@ -6,6 +6,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.RandomUtils;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+import org.apache.commons.lang3.time.StopWatch;
 import org.junit.Test;
 import vo.ExtendSimple;
 import vo.Simple;
@@ -27,6 +28,22 @@ public class ExcelTest {
         List<Simple> simpleList = simpleBeanDatas(10);
         excelExportWriter.export(simpleList);
         excelExportWriter.writeTo(new FileOutputStream("d:/test/"+System.currentTimeMillis()+".xlsx"));
+    }
+
+    /**
+     * 10w 数据导出大概需要 5 秒左右
+     * @throws IOException
+     */
+    @Test
+    public void test10wData() throws IOException {
+        List<Simple> simpleList = simpleBeanDatas(100000);
+
+        StopWatch stopWatch = new StopWatch();stopWatch.start();
+        ExcelExportWriter excelExportWriter = new ExcelExportWriter(Simple.class);
+        excelExportWriter.export(simpleList);
+        excelExportWriter.writeTo(new FileOutputStream("d:/test/"+System.currentTimeMillis()+".xlsx"));
+        stopWatch.stop();
+        System.out.println("10 万数据导出用时:"+stopWatch.getTime()+" ms");
     }
 
     /**

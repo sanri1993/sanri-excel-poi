@@ -34,5 +34,5 @@ public @interface ExcelImport {
 	 * 作者：sanri<br/>
 	 * @return<br/>
 	 */
-	int startRow();
+	int startRow() default 1;
 }

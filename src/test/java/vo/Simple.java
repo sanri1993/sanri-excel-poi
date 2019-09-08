@@ -20,7 +20,7 @@ public class Simple {
     private String name;
     @ExcelColumn(value = "生日",order = 3)
     private Date birthday;
-    @ExcelColumn(value = "序号",order = 4)
+    @ExcelColumn(value = "序号",order = 4,hidden = true)
     private long id;
     @ExcelColumn(value = "是否成功",order = 5)
     private boolean success;
