@@ -3,7 +3,8 @@
 sanri-excel-poi 是一个开源的用于企业开发的 Excel 导入导出，在 2017 年完成第一版，已经在线上环境实验过两年。主要用于解决 Excel 导出麻烦 ，导出慢，及 Excel 导入数据的空行，空格，数字精度，日期转换，Excel 公式 等问题。
 
 博客地址：https://blog.csdn.net/sanri1993/article/details/100601578
-**紧急说明：** 项目已经转移至开源中国 https://gitee.com/sanri/sanri-excel-poi ,本地址已经不提供更新
+
+**紧急说明：项目已经转移至开源中国 https://gitee.com/sanri/sanri-excel-poi ,本地址已经不提供更新** 
 -----
 
 ## 优势
